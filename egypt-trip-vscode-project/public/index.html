@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#08090b">
+  <meta name="description" content="The TD & NN Egypt journey.">
+  <title>TD × NN — Egypt</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div class="wordmark">TD <span>×</span> NN <i></i></div>
+      <div class="top-label">THE EGYPT JOURNEY <span>·</span> 2026</div>
+      <div class="live-label"><b></b><span id="topState">PREPARING FOR DEPARTURE</span></div>
+    </header>
+
+    <section class="hero">
+      <div class="eyebrow" id="heroEyebrow">NEXT DEPARTURE · FRIDAY, NOVEMBER 20</div>
+      <div class="hero-title" id="heroTitle">EGYPT<span>.</span></div>
+      <div class="countdown" id="countdown" aria-live="off">
+        <div><strong id="days">00</strong><small>DAYS</small></div><em>:</em>
+        <div><strong id="hours">00</strong><small>HOURS</small></div><em>:</em>
+        <div><strong id="minutes">00</strong><small>MINUTES</small></div><em>:</em>
+        <div><strong id="seconds">00</strong><small>SECONDS</small></div>
+      </div>
+      <p class="hero-caption" id="heroCaption">UNTIL WE TAKE OFF</p>
+    </section>
+
+    <section class="flight-card" aria-label="Current flight">
+      <div class="section-head"><span id="flightSectionTitle">YOUR JOURNEY</span><span class="mono" id="flightStatus">SCHEDULED</span></div>
+      <div class="flight-route">
+        <div class="airport"><strong id="originCode">BNA</strong><span id="originName">NASHVILLE</span><small id="originTime">6:25 PM · NOV 20</small></div>
+        <div class="route-track">
+          <div class="track-line"><div class="track-progress" id="trackProgress"></div><div class="plane" id="plane">✈</div></div>
+          <div class="route-meta"><span id="flightNumber">BA 222</span><span id="routeDuration">VIA LONDON</span></div>
+        </div>
+        <div class="airport right"><strong id="destCode">LHR</strong><span id="destName">LONDON</span><small id="destTime">NOV 21</small></div>
+      </div>
+      <div class="flight-bottom"><span id="flightDetail">NASHVILLE → LONDON</span><span id="flightDataSource">TICKET SCHEDULE</span></div>
+    </section>
+
+    <section class="where-card">
+      <div class="section-head"><span>OUR LOCATION</span><span class="location-dot"></span></div>
+      <div class="where-main"><div><div class="where-city" id="whereCity">Nashville</div><div class="where-sub" id="whereSub">TENNESSEE, USA</div></div><div class="where-date" id="whereDate">NOV 16, 2026</div></div>
+      <div class="location-note" id="locationNote">The countdown is on. Next stop: Cairo.</div>
+    </section>
+
+    <section class="journal-section">
+      <div class="journal-heading"><div><div class="eyebrow">POSTCARDS FROM THE ROAD</div><h2>THE JOURNAL<span>.</span></h2></div><div class="journal-date" id="journalCount">0 ENTRIES</div></div>
+      <div id="journalList" class="journal-list"><div class="empty-state">No Stories Yet.</div></div>
+    </section>
+
+    <footer class="footer">
+      <span>TD × NN <i>·</i> EGYPT, 2026</span>
+      <button id="ownerButton" class="owner-button">OWNER LOGIN</button>
+    </footer>
+  </main>
+
+  <dialog id="ownerDialog" class="dialog">
+    <form id="loginForm" class="dialog-panel">
+      <button type="button" class="close" data-close aria-label="Close">×</button>
+      <div class="eyebrow">PRIVATE AREA</div><h3>Owner access</h3>
+      <label>Password<input id="password" type="password" autocomplete="current-password" required></label>
+      <button class="primary" type="submit">UNLOCK EDITOR</button>
+      <p class="form-message" id="loginMessage"></p>
+    </form>
+  </dialog>
+
+  <dialog id="editorDialog" class="dialog">
+    <form id="entryForm" class="dialog-panel">
+      <button type="button" class="close" data-close aria-label="Close">×</button>
+      <div class="eyebrow">PRIVATE EDITOR</div><h3>Share today.</h3>
+      <label>Date<input id="entryDate" type="date" required></label>
+      <label>Title<input id="entryTitle" type="text" placeholder="A day in Cairo" maxlength="90" required></label>
+      <label>What's happening?<textarea id="entryBody" rows="4" placeholder="A few words about the day..."></textarea></label>
+      <label class="upload-label">Photos<input id="entryPhotos" type="file" accept="image/*" multiple></label>
+      <div id="uploadPreview" class="upload-preview"></div>
+      <label class="check-label"><input id="entryPublished" type="checkbox" checked> Publish this entry for visitors</label>
+      <button class="primary" type="submit">PUBLISH JOURNAL ENTRY</button>
+      <button class="secondary" id="logoutButton" type="button">LOG OUT</button>
+      <p class="form-message" id="entryMessage"></p>
+    </form>
+  </dialog>
+
+  <script src="./js/config.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>

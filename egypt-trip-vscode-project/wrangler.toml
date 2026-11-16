@@ -1,0 +1,12 @@
+name = "tdnncairo"
+compatibility_date = "2026-11-16"
+pages_build_output_dir = "./public"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "egypt-trip-db"
+database_id = "REPLACE_WITH_D1_DATABASE_ID"
+
+[[r2_buckets]]
+binding = "PHOTOS"
+bucket_name = "egypt-trip-photos"
